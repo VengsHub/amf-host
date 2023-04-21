@@ -12,6 +12,10 @@ const routes: Routes = [
     path: 'remote',
     loadChildren: () => import('remote/Module').then(m => m.SubModule)
   },
+  {
+    path: 'test',
+    loadComponent: () => import('remote-vite/Button').then(m => m.Button)
+  }
 ];
 
 @NgModule({
